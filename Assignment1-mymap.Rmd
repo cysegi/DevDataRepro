@@ -1,0 +1,21 @@
+---
+title: "Assignment 1-My Map"
+author: "ChewYoong.C"
+date: "July 23, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Space Needle
+``` {r, echo=FALSE}
+library(leaflet)
+my_map <- leaflet() %>%
+  addTiles()
+SpaceNeedle <- c("<a href= 'https://www.spaceneedle.com/home/' >Space Needle</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=47.620471, lng=-122.349341, popup = SpaceNeedle)
+```
